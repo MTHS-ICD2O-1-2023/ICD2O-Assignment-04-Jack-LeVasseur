@@ -1,9 +1,64 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Title</title>
-  </head>
-  <body>
-    <p>Paragraph</p>
-  </body>
+<head>
+  <meta charset="utf-8" />
+  <meta name="keywords" content="mths, icd2o" />
+  <meta name="author" content="Jack LeVasseur" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+  <link rel="manifest" href="site.webmanifest" />
+  <title>Pizza Store program, with JS</title>
+</head>
+<body>
+  <script src="./js/script.js"></script>
+  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <header class="mdl-layout__header">
+      <div class="mdl-layout__header-row">
+        <span class="mdl-layout-title">The Pizza Store program, with JS</span>
+      </div>
+    </header>
+    <main class="mdl-layout__content">
+      </div>
+      <div class="page-content">Enter in what you want size and how many topings you want on your pizza</div>
+      <br />
+      <form action="#">
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+          <label class="mdl-textfield__label" for="size">Select the size of pizza you want to order</label><br>
+          <input type="radio" id="small" class="mdl-radio" name="size" value="small">
+          <label for="small">Small</label><br>
+          <input type="radio" id="medium" class="mdl-radio" name="size" value="medium">
+          <label for="medium">Medium</label><br>
+          <input type="radio" id="large" class="mdl-radio" name="size" value="large" checked>
+          <label for="large">Large</label><br>
+          <input type="radio" id="extraLarge" class="mdl-radio" name="size" value="extraLarge">
+          <label for="extraLarge">Extra Large</label><br><br>
+        </div>
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+          <label class="mdl-textfield__label" for="toppings">Select the number of topings you want
+            pizza</label><br>
+          <input type="radio" id="oneTopping" class="mdl-radio" name="toppings" value="1" checked>
+          <label for="oneTopping">1- Pepperoni</label><br>
+          <input type="radio" id="twoToppings" class="mdl-radio" name="toppings" value="2">
+          <label for="twoToppings">2- Bacaon </label><br>
+          <input type="radio" id="threeToppings" class="mdl-radio" name="toppings" value="3">
+          <label for="threeToppings">3 - Green pepers</label><br>
+          <input type="radio" id="fourToppings" class="mdl-radio" name="toppings" value="4">
+          <label for="fourToppings">4 - Olives</label><br><br>
+        </div>
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+          onclick="calculateOrder()" type="button">
+          Calculate
+        </button>
+      </form>
+      <br />
+      <div class="page-content-answer">
+        <div id="result"></div>
+      </div>
+    </main>
+  </div>
+</body>
 </html>
